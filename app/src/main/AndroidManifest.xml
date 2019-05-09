@@ -1,0 +1,24 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.catmorbid.notifications_demo">
+
+    <application android:allowBackup="true"
+                 android:label="@string/app_name"
+                 android:icon="@mipmap/ic_launcher"
+                 android:roundIcon="@mipmap/ic_launcher_round"
+                 android:supportsRtl="true"
+                 android:theme="@style/AppTheme">
+        <activity
+                android:label="Messaging Notification Test"
+                android:name="com.catmorbid.test_notifications.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <receiver android:name="com.catmorbid.test_notifications.BroadcastHandler">
+            <intent-filter>
+                <action android:name="Demo.Action.Broadcast"/>
+            </intent-filter>
+        </receiver>
+    </application>
+</manifest>
